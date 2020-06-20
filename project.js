@@ -121,15 +121,11 @@ function largestIncrement(numbers) {
  * afterX([11, 35, 52, 14, 56, 601, 777, 888, 999], 52) -> [14, 56, 601, 777, 888, 999]
  */
 function afterX(numbers, x) {
-  let afterNum = [];
-  for (let i = 0; i < numbers.length; i++) {
+  for (let i = 0; i < numbers.length; i++)
     if (numbers[i] === x) {
-      afterNum = numbers.slice(x, numbers.length);
+      return numbers.slice(i + 1, numbers.length);
     }
-  }
-  return afterNum;
 }
-
 /**
  * abbreviate(firstName, lastName):
  * - receives a first name and a last name
